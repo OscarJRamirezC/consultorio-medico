@@ -1,0 +1,63 @@
+\documentclass[twocolumn,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{lipsum}
+
+\title{Desarrollo de un Consultorio Médico Virtual}
+\author{Oscar Ramirez -
+joseph mendieta}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este informe documenta el proceso de desarrollo de un consultorio médico virtual usando FastAPI para el backend y HTML/CSS/JavaScript para el frontend. Se incluye la implementación, problemas encontrados y soluciones aplicadas.
+\end{abstract}
+
+\section{Introducción}
+El objetivo del proyecto es desarrollar un consultorio médico virtual que permita a los usuarios hacer preguntas médicas y recibir respuestas generadas por un modelo de lenguaje natural especializado en medicina.
+
+El sistema se compone de un backend desarrollado con FastAPI y un frontend construido con HTML, CSS y JavaScript. La integración se realiza a través de una API que permite enviar preguntas y recibir respuestas del modelo de IA MedLlama2.
+
+\section{Implementación}
+\subsection{Backend con FastAPI}
+El backend se desarrolló utilizando FastAPI, un framework web moderno y rápido para construir APIs con Python. Se definieron dos endpoints principales: uno para servir el archivo HTML y otro para manejar las consultas a la IA.
+
+El endpoint para consultas procesa las preguntas enviadas por los usuarios y las envía al modelo MedLlama2. La respuesta de la IA se devuelve al frontend para ser mostrada al usuario.
+
+\subsection{Frontend con HTML/CSS/JavaScript}
+El frontend incluye una interfaz básica en HTML que permite a los usuarios escribir preguntas y enviar consultas al backend. La comunicación entre el frontend y el backend se realiza mediante peticiones HTTP.
+
+El diseño de la interfaz se realizó con HTML y CSS, asegurando una experiencia de usuario amigable. El comportamiento dinámico y las interacciones con el backend se manejan mediante JavaScript.
+
+\section{Problemas al Desarrollar}
+Durante el desarrollo, se encontraron varios problemas, entre los que se incluyen:
+
+\subsection{Errores 404}
+El servidor no pudo encontrar los archivos estáticos CSS y JS. Este problema se resolvió asegurando que los archivos estuvieran ubicados en la carpeta correcta y ajustando las rutas en el HTML.
+
+\subsection{Integración con la IA}
+Hubo dificultades para integrar correctamente las consultas a la IA de MedLlama2. Inicialmente, la URL del servicio no era correcta y se tuvo que ajustar la configuración del servidor local para que el backend pudiera comunicarse con la API de IA.
+
+\subsection{Acceso a la Cámara}
+En el desarrollo del frontend, se intentó implementar acceso a la cámara para funcionalidades adicionales. Sin embargo, se encontraron errores que fueron manejados adecuadamente para no interrumpir la experiencia del usuario.
+
+\section{Conclusión}
+Este proyecto proporciona una base para un consultorio médico virtual utilizando tecnologías modernas. Aunque se encontraron varios problemas durante el desarrollo, estos se resolvieron y el sistema es funcional. Se pueden realizar mejoras adicionales en la interfaz de usuario y la robustez del backend.
+
+\section{Referencias}
+\begin{itemize}
+    \item FastAPI: \url{https://fastapi.tiangolo.com/}
+    \item HTML: \url{https://developer.mozilla.org/en-US/docs/Web/HTML}
+    \item CSS: \url{https://developer.mozilla.org/en-US/docs/Web/CSS}
+    \item JavaScript: \url{https://developer.mozilla.org/en-US/docs/Web/JavaScript}
+    \item MedLlama2: \url{https://ollama.com/models/medllama2}
+\end{itemize}
+
+\end{document}
