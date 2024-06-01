@@ -1,0 +1,37 @@
+#chat {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#messages {
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    max-height: 200px;
+    border-bottom: 1px solid #ccc;
+}
+
+#input {
+    width: calc(100% - 70px);
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#send {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#ia-response {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
